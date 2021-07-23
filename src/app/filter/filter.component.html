@@ -1,0 +1,39 @@
+<div class="filtertaskblock">
+<div class="filterbox __filterboxtop">
+  <div class="filterbox __filterboxtopleft">
+    <div class="filterbox __filterboxtoplefttop">
+      <p>Фильтр по приоритету:</p>
+      <select name=""
+              [(ngModel)]="filter.priority"
+              id="selectpriority"
+              (ngModelChange)="filterForm()">
+        <option value="0">Любой</option>
+        <option value="1">Низкий</option>
+        <option value="2">Средний</option>
+        <option value="3">Высокий</option>
+      </select>
+    </div>
+    <div class="filterbox __filterboxtopleftbottom">
+      <p>Сортировка по дате:</p>
+      <div class="sorting __sortingdata __sortUp" #sortData (click)="sortingChoise($event)">Дата создания</div>
+    </div>
+  </div>
+  <div class="filterbox __filterboxtopright">
+    <div class="filterbox __filterboxtoprighttop">
+      <p>Фильтр по статусу:</p>
+      <p>Активные</p>
+      <input type="checkbox" [(ngModel)]="filter.active" (ngModelChange)="filterForm()">
+      <p>Завершённые</p>
+      <input type="checkbox" [(ngModel)]="filter.end" (ngModelChange)="filterForm()"  >
+    </div>
+    <div class="filterbox __filterboxtoprightbottom">
+      <p>Сортировка по приоритету:</p>
+      <div class="sorting __sortingpriority activeSort __sortUp" #sortPriority (click)="sortingChoise($event)">Приоритет</div>
+    </div>
+  </div>
+</div>
+  <div class="filterbox __filterboxbottom">
+    <p>Поиск задачи по тексту:</p>
+    <input type="text" class="findtask" [(ngModel)]="searchtext" (input)="search()" >
+  </div>
+</div>

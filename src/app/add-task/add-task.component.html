@@ -1,0 +1,20 @@
+<div class="addtaskblock">
+  <div class="addtaskcontainer">
+    <p class="helptext">Выбери приоритет</p>
+    <select name="" id="selectpriority" [(ngModel)]="priority">
+      <option value="low">Низкий</option>
+      <option value="middle">Средний</option>
+      <option value="high">Высокий</option>
+    </select>
+  </div>
+  <div class="addtaskcontainer">
+    <p class="helptext">Введи текст задачи</p>
+    <input type="text" placeholder="Введите текст задачи.." id="inputtext" [(ngModel)]="text">
+  </div>
+  <div class="addtaskcontainer">
+    <p class="helptext">Жми!</p>
+    <div class="addbutton" (click)="addTask()">Добавить задачу</div>
+  </div>
+
+
+</div>

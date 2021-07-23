@@ -1,0 +1,64 @@
+.taskcard
+  margin: 10px 0px
+  width: inherit
+  display: flex
+  justify-content: space-around
+  height: 100px
+  align-items: center
+
+.taskcard-card
+  background-color: white
+  width: 700px
+  height: inherit
+  display: flex
+  justify-content: space-between
+
+.deletetask
+  width: 28px
+  height: 40px
+
+.check:after
+  content: '\2713'
+  font-size: 30px
+
+.return:after
+  content: '\2718'
+  font-size: 30px
+
+.taskcard-card-left-time
+  font-size: 12px
+
+.taskcard-card-left-text
+  font-size: 25px
+
+.taskcard-card-left, .taskcard-card-control, check, return
+  margin: 5px 15px
+
+.taskcard-card-left
+  height: inherit
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+
+.highPriority:after
+  color: green
+  content: 'Высокий'
+
+.middlePriority:after
+  color: orange
+  content: 'Средний'
+
+.lowPriority:after
+  color: red
+  content: 'Низкий'
+
+.greenCard
+  background-color: chartreuse
+
+.taskcard-card-left-textEdit
+  width: 500px
+.__taskcard-card-left-textEditHidden
+  display: none
+.taskcard-priority
+  width: 100px
+

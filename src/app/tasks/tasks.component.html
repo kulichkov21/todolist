@@ -1,0 +1,23 @@
+<div class="taskcard">
+  <div class="taskcard-priority" [ngClass]="{
+    highPriority : task.priority === 3,
+    middlePriority : task.priority === 2,
+    lowPriority : task.priority === 1
+    }"></div>
+  <div class="taskcard-card" [ngClass]="{
+  greenCard: task.done
+  }">
+    <div class="taskcard-card-left">
+      <div class="taskcard-card-left-text" (click)="editTask($event)">{{task.text}}</div>
+      <input type="text" class="taskcard-card-left-textEdit __taskcard-card-left-textEditHidden" value="{{task.text}}">
+      <div class="taskcard-card-left-time">{{task.time | date: 'short'}}</div>
+    </div>
+    <div class="taskcard-card-control check" *ngIf="task.active" (click)="taskDone($event)"></div>
+    <div class="taskcard-card-control return" *ngIf="task.done" (click)="taskDone($event)"></div>
+  </div>
+  <div class="taskcard-mark"><img src="./assets/d.png" alt="" class="deletetask" (click)="deleteTask(task)"></div>
+</div>
+
+
+
+
